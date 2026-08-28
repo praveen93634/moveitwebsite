@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import Reveal from "@/reuseable/Reveal";
 
 interface StepTab {
     id: string;
@@ -119,19 +120,21 @@ export default function YourDoorStep() {
             <div className="w-full px-5 sm:px-8 md:px-12 lg:px-[6%] flex flex-col flex-1 justify-between">
 
                 {/* Section Header with Scroll Color Reveal */}
-                <div className="text-center z-10 mb-8 sm:mb-12 md:mb-14">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12]">
-                        <motion.span
-                            style={{ color: fromColor }}
-                            className="transition-colors duration-200"
-                        >
-                            From
-                        </motion.span>{" "}
-                        <span className="text-[#FFFFFF]">Tap to</span>
-                        <br />
-                        <span className="text-[#FFFFFF]">Your Doorstep.</span>
-                    </h2>
-                </div>
+                <Reveal delay={0.1}>
+                    <div className="text-center z-10 mb-8 sm:mb-12 md:mb-14">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12]">
+                            <motion.span
+                                style={{ color: fromColor }}
+                                className="transition-colors duration-200"
+                            >
+                                From
+                            </motion.span>{" "}
+                            <span className="text-[#FFFFFF]">Tap to</span>
+                            <br />
+                            <span className="text-[#FFFFFF]">Your Doorstep.</span>
+                        </h2>
+                    </div>
+                </Reveal>
 
                 {/* 3-Column Interactive Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start gap-8 md:gap-8 lg:gap-14 z-10 w-full">

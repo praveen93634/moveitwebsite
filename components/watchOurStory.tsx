@@ -1,12 +1,15 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import Reveal from "@/reuseable/Reveal";
 
 const WatchOurStory = () => {
     return (
         <section className="w-full p-3 sm:p-5 md:p-[3%] pt-0 sm:pt-0 md:pt-0">
-            <div className="flex flex-col gap-4 sm:gap-4    ">
-
-               
+            <div className="flex flex-col gap-4 sm:gap-4">
+                {/* Top Full-Width Hero Video / Story Card */}
+                <Reveal delay={0.1}>
                     <div className="group relative w-full aspect-[16/9] rounded-[28px] md:rounded-[20px] overflow-hidden shadow-xs cursor-pointer select-none">
                         {/* Background Image */}
                         <Image
@@ -35,13 +38,12 @@ const WatchOurStory = () => {
                             </div>
                         </div>
                     </div>
-               
+                </Reveal>
 
                 {/* Bottom Bento Grid: 2 Columns */}
-                
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
-
-                        {/* Bottom-Left Card: Built for everyday moments */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
+                    {/* Bottom-Left Card: Built for everyday moments */}
+                    <Reveal delay={0.15} className="h-full">
                         <div className="group relative w-full aspect-[3/3] rounded-[28px] md:rounded-[32px] overflow-hidden shadow-xs flex flex-col justify-end p-6 sm:p-8 md:p-10">
                             {/* Background Image */}
                             <Image
@@ -67,10 +69,11 @@ const WatchOurStory = () => {
                                 </p>
                             </div>
                         </div>
+                    </Reveal>
 
-                        {/* Bottom-Right Card: Always know where it is */}
+                    {/* Bottom-Right Card: Always know where it is */}
+                    <Reveal delay={0.25} className="h-full">
                         <div className="group relative w-full aspect-[3/3] rounded-[28px] sm:rounded-[32px] md:rounded-[32px] overflow-hidden shadow-xs bg-gradient-to-br from-[#1A3D68] via-[#0E203B] to-[#080E18] flex flex-col justify-between p-6 sm:p-8 md:p-10">
-
                             <Image
                                 src="/gradient.png"
                                 alt="Delivery parcel handover - Built for everyday moments"
@@ -104,10 +107,9 @@ const WatchOurStory = () => {
                                     is—from pickup to doorstep.
                                 </p>
                             </div>
-
                         </div>
-
-                    </div>
+                    </Reveal>
+                </div>
             </div>
         </section>
     );

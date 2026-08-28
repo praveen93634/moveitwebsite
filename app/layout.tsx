@@ -3,6 +3,7 @@ import { Manrope, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import GlobalLoader from "@/components/GlobalLoader";
+import SmoothScroller from "@/reuseable/SmoothScroller";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -27,8 +28,11 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", manrope.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col font-sans">
+
         <GlobalLoader />
-        {children}
+        <SmoothScroller>
+          {children}
+        </SmoothScroller>
       </body>
     </html>
   );

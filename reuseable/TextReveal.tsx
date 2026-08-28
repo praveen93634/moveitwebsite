@@ -90,14 +90,12 @@ export default function TextReveal({
 
       const createPinnedAnimation = (
         pinMultiplier: number,
-        stagger: number,
-        shouldPin = true,
-        pinSpacing = true
+        stagger: number
       ) => {
         const getEnd = () =>
           `+=${Math.round(window.innerHeight * pinMultiplier)}`;
 
-        const textReveal = gsap.to(allWords, {
+        const anim = gsap.to(allWords, {
           color: activeColor,
           stagger,
           ease: "none",
@@ -105,41 +103,28 @@ export default function TextReveal({
             trigger: sectionEl,
             start: "top top",
             end: getEnd,
-            scrub: 0.7,
+            scrub: 0.5,
+            pin: pin,
+            pinSpacing: true,
             invalidateOnRefresh: true,
-            fastScrollEnd: true,
           },
         });
 
-        const pinTrigger =
-          shouldPin && pin
-            ? ScrollTrigger.create({
-                trigger: sectionEl,
-                start: "top top",
-                end: getEnd,
-                pin: true,
-                pinSpacing,
-                anticipatePin: 1,
-                invalidateOnRefresh: true,
-                fastScrollEnd: true,
-              })
-            : null;
-
         return () => {
-          textReveal.kill();
-          pinTrigger?.kill();
+          anim.scrollTrigger?.kill();
+          anim.kill();
         };
       };
 
       // Responsive pinning heights & stagger speeds
       mm.add("(min-width: 1280px)", () =>
-        createPinnedAnimation(1.35, 0.1, true, true)
+        createPinnedAnimation(1.2, 0.08)
       );
       mm.add("(min-width: 768px) and (max-width: 1279px)", () =>
-        createPinnedAnimation(1.1, 0.09, true, true)
+        createPinnedAnimation(1.0, 0.07)
       );
       mm.add("(max-width: 767px)", () =>
-        createPinnedAnimation(0.85, 0.06, true, true)
+        createPinnedAnimation(0.8, 0.05)
       );
     }, sectionEl);
 

@@ -43,7 +43,7 @@ export default function Delivery() {
                 {/* Android Button */}
                 <button
                   type="button"
-                  className="flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-4 pr-1 py-2 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
+                  className="flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-12 pr-1 py-2 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
                 >
                   <span className="text-xs sm:text-base font-medium tracking-tight">
                     Download on Android
@@ -58,7 +58,7 @@ export default function Delivery() {
                 {/* iOS Button */}
                 <button
                   type="button"
-                  className="flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-3 pr-1 py-2 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
+                  className="flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-12 pr-1 py-2 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
                 >
                   <span className="text-xs sm:text-base font-medium tracking-tight">
                     Download on IOS
@@ -108,7 +108,7 @@ export default function Delivery() {
               {/* Drive with Moveit Button */}
               <button
                 type="button"
-                className="w-full flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-3 pr-1 py-1 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
+                className="w-full flex items-center justify-between bg-white hover:bg-slate-100 text-black pl-6 pr-1 py-1 sm:py-1 rounded-[12px] shadow-sm transition-all duration-200 cursor-pointer group/btn"
               >
                 <span className="w-full text-center text-xs sm:text-base font-medium tracking-tight">
                   Drive with Moveit

@@ -187,7 +187,7 @@ export default function TextReveal({
               )}
               {mainTitle && (
                 <span
-                  className="text-[44px] sm:text-[60px] md:text-[76px] lg:text-[5rem] font-medium tracking-tighter"
+                  className="text-[44px] sm:text-[60px] md:text-[76px] lg:text-[5rem] font-medium leading-[1.2] tracking-tighter"
                   style={{ color: titleColor }}
                 >
                   {mainTitle}
@@ -211,7 +211,7 @@ export default function TextReveal({
                     : align === "right"
                     ? "text-right"
                     : "text-left"
-                } text-[22px] sm:text-[28px] md:text-[34px] lg:text-[38px] leading-[1.4] sm:leading-[1.45] tracking-[-0.015em] max-w-4xl`}
+                } text-[22px] sm:text-[28px] md:text-[34px] lg:text-[38px] leading-[1.3] sm:leading-[1.3] tracking-[-0.015em] max-w-3xl whitespace-pre-line`}
               >
                 <SplitWords text={para} inactiveColor={inactiveColor} />
               </p>
@@ -221,7 +221,7 @@ export default function TextReveal({
           {/* Byline / Footer Subtitle */}
           {byline && (
             <div
-              className={`mt-10 sm:mt-14 md:mt-16 text-sm sm:text-base font-medium tracking-wide select-none ${
+              className={`mt-10 sm:mt-14 md:mt-16 text-sm sm:text-2xl font-medium tracking-tight select-none ${
                 align === "center"
                   ? "text-center"
                   : align === "right"

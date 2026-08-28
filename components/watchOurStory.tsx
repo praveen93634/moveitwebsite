@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const WatchOurStory = () => {
     return (
-        <section className="w-full p-3 sm:p-5 md:p-[5%] pt-0 sm:pt-0 md:pt-0">
-            <div className="flex flex-col gap-4 sm:gap-6">
+        <section className="w-full p-3 sm:p-5 md:p-[3%] pt-0 sm:pt-0 md:pt-0">
+            <div className="flex flex-col gap-4 sm:gap-4    ">
 
                
                     <div className="group relative w-full aspect-[16/9] rounded-[28px] md:rounded-[20px] overflow-hidden shadow-xs cursor-pointer select-none">
@@ -39,7 +39,7 @@ const WatchOurStory = () => {
 
                 {/* Bottom Bento Grid: 2 Columns */}
                 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
 
                         {/* Bottom-Left Card: Built for everyday moments */}
                         <div className="group relative w-full aspect-[3/3] rounded-[28px] md:rounded-[32px] overflow-hidden shadow-xs flex flex-col justify-end p-6 sm:p-8 md:p-10">

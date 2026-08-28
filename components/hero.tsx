@@ -3,14 +3,16 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Navbar from "@/components/navbar";
 
 export default function Hero() {
     return (
         <section className="relative w-full p-3 sm:p-5 md:p-8">
             {/* Outer Card Container */}
-            <div className="relative w-full bg-[#F1F5F9] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden px-5 sm:px-10 md:px-14 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-12 md:pb-16 flex flex-col items-center">
+            <div className="relative w-full bg-[#F1F5F9] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden px-5 sm:px-10 md:px-14 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-12 md:pb-16 flex flex-col items-center">
+                <Navbar />
 
-                <div className="flex flex-col items-center text-center mt-8 sm:mt-10 md:mt-12 z-10">
+                <div className="flex flex-col items-center text-center mt-6 sm:mt-8 md:mt-10 z-10">
                     <div className="inline-flex items-center justify-center px-4 py-1.5 mb-3 sm:mb-4 rounded-md bg-[#F2F5F9] border border-slate-200/80 shadow-xs backdrop-blur-sm">
                         <span className="text-xs md:text-sm font-semibold text-[#7A7A7A] tracking-tight">
                             Deliver Anything. Anytime. Anywhere.

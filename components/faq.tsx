@@ -44,16 +44,16 @@ const faqData: FAQItem[] = [
 
 function ActionIcon({ isOpen }: { isOpen: boolean }) {
   return (
-    <div className="w-5 h-5 rounded-full border border-[#9CA3AF]/60 flex items-center justify-center shrink-0 transition-all duration-200">
+    <div className="w-5 h-5 rounded-full border border-[#9CA3AF] flex items-center justify-center shrink-0 transition-all duration-200">
       {isOpen ? (
-        <span className="w-2.5 h-[1.5px] bg-[#4B5563] block" />
+        <span className="w-2.5 h-[1.5px] bg-[#111827] block rounded-full" />
       ) : (
         <svg
-          className="w-3 h-3 text-[#6B7280]"
+          className="w-2.5 h-2.5 text-[#64748B]"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          strokeWidth={2}
+          strokeWidth={2.2}
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m7-7H5" />
         </svg>
@@ -70,11 +70,11 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full max-w-[1360px] mx-auto px-6 sm:px-10 md:px-16 py-20 sm:py-28 md:py-36 ">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-20 items-stretch ">
+    <section className="w-full max-w-[1360px] mx-auto px-6 sm:px-10 md:px-16 py-20 sm:py-28 md:py-36">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.7fr] gap-12 lg:gap-20 items-stretch">
         
         {/* Left Column: Heading (Top) + Onboarding Help Card (Bottom) */}
-        <div className="flex flex-col justify-between h-full gap-16 lg:gap-0 ">
+        <div className="flex flex-col justify-between h-full gap-16 lg:gap-0">
           <Reveal delay={0.1}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] font-bold tracking-tight text-[#111827] leading-[1.12]">
               Frequently
@@ -83,12 +83,12 @@ export default function FAQ() {
             </h2>
           </Reveal>
 
-          {/* Onboarding Help Card */}
+          {/* Onboarding Help Card (Pinned to bottom of left column) */}
           <Reveal delay={0.25}>
-            <div className="flex flex-col gap-3 w-full max-w-[280px] sm:max-w-[300px]">
+            <div className="flex flex-col gap-2.5 w-full max-w-[270px] sm:max-w-[290px]">
               {/* Card Container */}
-              <div className="bg-[#EBF2FA] rounded-[28px] p-6 flex flex-col justify-between gap-6 shadow-xs">
-                <p className="text-[#141414] text-[15px] font-medium leading-[1.38] tracking-tight">
+              <div className="bg-[#EBF3FC] rounded-[24px] p-5 sm:p-6 flex flex-col justify-between gap-5 shadow-2xs">
+                <p className="text-[#1E293B] text-[13.5px] sm:text-[14px] font-normal leading-[1.45] tracking-tight">
                   Not sure how to sign up or use the app? Our team will guide you
                   through registration, document verification, and your first
                   delivery, step by step.
@@ -97,14 +97,14 @@ export default function FAQ() {
                 {/* Help Me Onboard Button */}
                 <button
                   type="button"
-                  className="w-full flex items-center justify-between bg-[#DBE6F4] hover:bg-[#D2E0F0] rounded-[18px] p-1.5 pl-4 pr-1.5 text-[#141414] transition-all duration-200 cursor-pointer group shadow-2xs"
+                  className="w-full flex items-center justify-between bg-[#DAE8F8] hover:bg-[#CFE1F4] rounded-[16px] p-1.5 pl-4 pr-1.5 text-[#141414] transition-all duration-200 cursor-pointer group"
                 >
                   <span className="text-xs sm:text-[13px] font-medium tracking-tight">
                     Help Me Onboard
                   </span>
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#141414] group-hover:bg-black rounded-[12px] sm:rounded-[14px] flex items-center justify-center transition-colors">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-[#141414] group-hover:bg-black rounded-[11px] sm:rounded-[12px] flex items-center justify-center transition-colors">
                     <svg
-                      className="w-4 h-4 text-white stroke-[1.8]"
+                      className="w-3.5 h-3.5 text-white stroke-[2]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -119,8 +119,8 @@ export default function FAQ() {
                 </button>
               </div>
 
-              {/* Bottom Twin Bars */}
-              <div className="flex items-center gap-2 px-0.5">
+              {/* Bottom Twin Indicator Bars */}
+              <div className="flex items-center gap-2 px-1">
                 <div className="h-[3.5px] w-1/2 bg-[#141414] rounded-full" />
                 <div className="h-[3.5px] w-1/2 bg-[#141414] rounded-full" />
               </div>
@@ -129,33 +129,33 @@ export default function FAQ() {
         </div>
 
         {/* Right Column: Chat Flow Q&A */}
-        <div className="flex flex-col gap-4 sm:gap-5 justify-center">
+        <div className="flex flex-col gap-3.5 sm:gap-4 justify-center w-full">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <Reveal key={`${item.id}-${index}`} delay={0.1 + index * 0.06}>
-                <div className="flex flex-col gap-3">
+              <Reveal key={`${item.id}-${index}`} delay={0.1 + index * 0.05}>
+                <div className="flex flex-col gap-3 w-full">
                   
                   {/* Question Bubble */}
                   <button
                     type="button"
                     onClick={() => toggle(index)}
-                    className={`self-start min-w-[240px] max-w-[90%] sm:max-w-[340px] flex items-center justify-between gap-4 px-5 py-3.5 rounded-2xl text-left cursor-pointer transition-all duration-200 ${
+                    className={`self-start w-full max-w-[320px] sm:max-w-[350px] flex items-center justify-between gap-4 px-5 py-3.5 rounded-[18px] text-left cursor-pointer transition-all duration-200 ${
                       isOpen
-                        ? "bg-white text-[#111827] shadow-xs border border-gray-200/80"
-                        : "bg-[#EAEAEA] hover:bg-[#E2E2E2] text-[#4B5563]"
+                        ? "bg-white text-[#111827] shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-slate-100"
+                        : "bg-[#EDF0F3] hover:bg-[#E5E9EE] text-[#475569]"
                     }`}
                   >
-                    <span className="text-xs sm:text-[14px] font-medium tracking-tight leading-snug">
+                    <span className="text-xs sm:text-[13.5px] font-medium tracking-tight leading-snug">
                       {item.question}
                     </span>
                     <ActionIcon isOpen={isOpen} />
                   </button>
 
-                  {/* Answer Bubble (Offset to the right, chat-bubble appearance) */}
+                  {/* Answer Bubble (Indented to the right like a chat response) */}
                   {isOpen && (
-                    <div className="ml-10 sm:ml-24 md:ml-32 max-w-[90%] sm:max-w-[420px] bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-gray-100 transition-all duration-300">
-                      <p className="text-[#374151] text-xs sm:text-[14px] font-normal leading-relaxed">
+                    <div className="self-end ml-12 sm:ml-24 md:ml-36 lg:ml-40 max-w-[90%] sm:max-w-[460px] bg-white rounded-[22px] p-5 sm:p-6 shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-slate-100/90 transition-all duration-300">
+                      <p className="text-[#334155] text-xs sm:text-[13.5px] font-normal leading-[1.6] tracking-tight">
                         {item.answer}
                       </p>
                     </div>

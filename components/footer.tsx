@@ -181,7 +181,7 @@ export default function Footer() {
       </div>
 
       {/* Scooter Rider moving edge-to-edge across the entire screen width */}
-      <div className="absolute bottom-20 w-full -mx-6 sm:-mx-10 md:-mx-16 overflow-hidden pointer-events-none h-16 sm:h-30 -mb-6 sm:-mb-8 z-30">
+      <div className="absolute bottom-20 w-full -mx-6 sm:-mx-10 md:-mx-16 overflow-hidden pointer-events-none h-20 sm:h-28 md:h-32 -mb-6 sm:-mb-8 z-30">
         <motion.div
           className="absolute bottom-0 pointer-events-none"
           initial={{ x: "100vw" }}
@@ -192,18 +192,18 @@ export default function Footer() {
             ease: "linear",
           }}
         >
-          {/* Subtle natural riding bounce & vibration */}
+          {/* Subtle natural riding bounce, vibration & headlight beam */}
           <motion.div
             animate={{
-              y: [0, -2.5, 0, -1.5, 0],
-              rotate: [0, -0.5, 0, 0.4, 0],
+              y: [-2, -6, -1, -5, -2],
+              rotate: [-0.5, 0.5, -0.5],
             }}
             transition={{
               repeat: Infinity,
-              duration: 0.8,
+              duration: 0.65,
               ease: "easeInOut",
             }}
-            className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+            className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 drop-shadow-[0_10px_16px_rgba(0,0,0,0.5)]"
           >
             <Image
               src="/scooter.png"
@@ -212,6 +212,9 @@ export default function Footer() {
               className="object-contain"
               sizes="100px"
             />
+
+            {/* Headlight Beam effect */}
+            <div className="absolute top-[42%] left-[-24px] sm:left-[-28px] w-12 sm:w-16 h-6 sm:h-8 bg-gradient-to-l from-white/35 to-transparent transform -rotate-6 rounded-full blur-[3px] pointer-events-none opacity-50" />
           </motion.div>
         </motion.div>
       </div>

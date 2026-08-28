@@ -9,7 +9,7 @@ import Delivery from "@/components/delivery";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center justify-start">
+    <main className="min-h-screen bg-white flex flex-col items-center justify-start overflow-hidden">
       <Hero />
       <BackedByTIC />
       <WatchOurStory />

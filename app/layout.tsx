@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Manrope, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import GlobalLoader from "@/components/GlobalLoader";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -26,8 +27,9 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", manrope.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col font-sans">
-       
-        {children}</body>
+        <GlobalLoader />
+        {children}
+      </body>
     </html>
   );
 }

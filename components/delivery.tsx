@@ -126,11 +126,11 @@ export default function Delivery() {
                 </span>
                 <div className="w-6 h-6 sm:w-10 sm:h-10 bg-[#141414] rounded-lg flex items-center justify-center text-white shrink-0">
                   <svg
-                    className="w-3.5 h-3.5"
+                    className="w-6 h-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={2}
+                    strokeWidth={1}
                   >
                     <path
                       strokeLinecap="round"

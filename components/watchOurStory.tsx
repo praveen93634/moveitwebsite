@@ -107,7 +107,7 @@ const WatchOurStory = () => {
                                         src="/pickup.svg"
                                         alt="Live driver pickup tracking map"
                                         fill
-                                        className="object-contain transition-transform duration-500 group-hover/map:scale-102"
+                                        className="object-contain transition-transform duration-500 group-hover/map:scale-100"
                                         sizes="(max-width: 768px) 340px, 420px"
                                     />
 

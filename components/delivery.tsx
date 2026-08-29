@@ -11,7 +11,7 @@ export default function Delivery() {
         
         {/* Card 1: Customer Card (Need it delivered today?) */}
         <Reveal delay={0.1} className="h-full">
-          <div className="group relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] rounded-[32px] overflow-hidden  flex flex-col justify-end p-6 sm:p-8 md:p-10">
+          <div className="group relative w-full min-h-[70dvh] sm:min-h-[80dvh] md:min-h-[90dvh] rounded-[32px] overflow-hidden flex flex-col justify-end p-6 sm:p-8 md:p-10">
             
             {/* Split Video Background - Left side (Customer) */}
             <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -88,7 +88,7 @@ export default function Delivery() {
 
         {/* Card 2: Driver Card (Flexible hours. Drive. Deliver. Earn.) */}
         <Reveal delay={0.2} className="h-full">
-          <div className="group relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5]  rounded-[32px] overflow-hidden  flex flex-col justify-end p-6 sm:p-8 md:p-10">
+          <div className="group relative w-full min-h-[70dvh] sm:min-h-[80dvh] md:min-h-[90dvh] rounded-[32px] overflow-hidden flex flex-col justify-end p-6 sm:p-8 md:p-10">
             
             {/* Split Video Background - Right side (Driver) */}
             <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden pointer-events-none">

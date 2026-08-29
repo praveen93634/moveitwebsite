@@ -35,10 +35,10 @@ export default function Hero() {
 
                 {/* 3D Diorama & Scene */}
                 <Reveal delay={0.2} className="w-full flex justify-center">
-                    <div className="relative w-full max-w-[960px] mt-4 sm:mt-6 md:mt-8 flex justify-center items-center">
+                    <div className="relative w-full  mt-4 sm:mt-6 md:mt-8 flex justify-center items-center">
 
                     {/* Main 3D Diorama Image Container */}
-                    <div className="relative w-full aspect-[16/9] lg:max-h-[540px] rounded-2xl flex items-center justify-center mt-10">
+                    <div className="relative w-full aspect-[16/9] lg:max-h-[42dvh] rounded-2xl flex items-center justify-center mt-10">
                         <Image
                             src="/Hero-image.png"
                             alt="MOVEIT fast delivery 3D diorama showing rider delivering package to customer house"
@@ -59,7 +59,7 @@ export default function Hero() {
                                 repeat: Infinity,
                                 ease: "easeInOut",
                             }}
-                            className="absolute top-[6%] right-[12%] sm:top-[-14%] lg:right-[45%] lg:top-[-10%] md:right-[42%] z-20 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-20 drop-shadow-[0_20px_30px_rgba(0,0,0,0.25)] pointer-events-none select-none"
+                            className="absolute top-[6%] right-[12%] sm:top-[-14%] lg:right-[46.5%] lg:top-[-20%] md:right-[42%] z-20 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-20 drop-shadow-[0_20px_30px_rgba(0,0,0,0.25)] pointer-events-none select-none"
                         >
                             <Image
                                 src="/location point.png"

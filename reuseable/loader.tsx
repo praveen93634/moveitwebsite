@@ -126,7 +126,7 @@ export default function Loader({
 
       {/* Main Scooter & Road Scene Area */}
       <div
-        className="relative w-full h-44 sm:h-52 bg-gradient-to-b from-[#161922] via-[#0F1219] to-[#0A0C10] rounded-xl overflow-hidden border border-white/10 shadow-2xl flex flex-col items-center justify-between p-4 cursor-pointer group"
+        className="relative w-full h-44 sm:h-52  overflow-hidden flex flex-col items-center justify-between p-4 cursor-pointer group"
         onMouseDown={() => setIsBoosting(true)}
         onMouseUp={() => setIsBoosting(false)}
         onTouchStart={() => setIsBoosting(true)}
@@ -218,7 +218,7 @@ export default function Loader({
             className="relative w-28 h-28 sm:w-36 sm:h-36 drop-shadow-[0_12px_20px_rgba(0,0,0,0.6)] z-20"
           >
             <Image
-              src="/scooter.png"
+              src="/scooter-right.png"
               alt="Moveit Delivery Scooter moving"
               fill
               priority

@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Reveal from "@/reuseable/Reveal";
-import WarpText from "@/components/WarpText";
 import { motion } from "framer-motion";
 
 const NAV_LINKS = [
@@ -160,21 +159,14 @@ export default function Footer() {
       {/* Interactive WarpText Watermark - Full Width, Cut off halfway at bottom */}
       <div className="relative w-full overflow-hidden flex flex-col items-center justify-end h-[160px] sm:h-[220px] md:h-[280px] lg:h-[340px] w-full mt-6 select-none">
         
-        {/* WarpText Dynamic Interactive WebGL Text */}
-        <div className="w-full h-full absolute translate-y-1/4 sm:translate-y-1/3 inset-0 flex items-center justify-center pointer-events-auto">
-          <WarpText
-            text="MOVEIT"
-            color="0002342"
-            fontSize="clamp(4rem, 20dvw, 16rem)"
-            fontWeight={700}
-            letterSpacing="-0.06em"
-            lineHeight={0.9}
-            warpStrength={0.1}
-            warpScale={1.8}
-            speed={0.6}
-            pointerInfluence={0.45}
-            pointerStrength={0.4}
-            className="w-full h-full"
+        {/* Full Width Logo Image */}
+        <div className="w-full h-full absolute translate-y-1/4 sm:translate-y-1/3 inset-0 flex items-center justify-center pointer-events-none">
+          <Image
+            src="/moveit-logo-black.jpeg"
+            alt="MOVEIT"
+            fill
+            className="object-contain px-4 sm:px-8"
+            sizes="100vw"
           />
         </div>
 

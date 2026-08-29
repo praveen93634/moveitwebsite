@@ -87,7 +87,7 @@ export default function FAQ() {
           <Reveal delay={0.25}>
             <div className="flex flex-col gap-2.5 w-full max-w-[220px]">
               {/* Card Container */}
-              <div className="bg-[#EBF2FA] rounded-[22px] p-5 flex flex-col justify-between gap-5 shadow-2xs">
+              <div className="bg-[#EBF2FA] rounded-[22px] p-5 hidden  lg:flex flex-col justify-between gap-5 shadow-2xs">
                 <p className="text-[#1E293B] text-sm sm:text-base font-semibold leading-[1.4] tracking-tight">
                   Not sure how to sign up or use the app? Our team<br/> will guide you
                   through registration, document verification, and your<br/> first
@@ -120,7 +120,7 @@ export default function FAQ() {
               </div>
 
               {/* Bottom Twin Indicator Bars */}
-              <div className="flex items-center gap-1.5 px-0.5">
+              <div className="hidden lg:flex items-center gap-1.5 px-0.5">
                 <div className="h-[3px] w-1/2 bg-[#111827] rounded-full" />
                 <div className="h-[3px] w-1/2 bg-[#111827] rounded-full" />
               </div>
@@ -129,7 +129,7 @@ export default function FAQ() {
         </div>
 
         {/* Right Column: Chat Stream */}
-        <div className="flex flex-col gap-3.5 sm:gap-4 justify-center w-full mt-[10%]">
+        <div className="flex flex-col gap-3.5 sm:gap-4 justify-center w-full lg:mt-[10%]">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
             return (
@@ -166,7 +166,49 @@ export default function FAQ() {
             );
           })}
         </div>
+        {/* Tablet & Mobile Onboarding Card (Right-Aligned) */}
+        <Reveal delay={0.25} className="w-full flex justify-end lg:hidden mt-8">
+          <div className="flex flex-col gap-2.5 w-full max-w-[240px] sm:max-w-[260px]">
+            {/* Card Container */}
+            <div className="bg-[#EBF2FA] rounded-[22px] p-5 flex flex-col justify-between gap-5 shadow-2xs">
+              <p className="text-[#1E293B] text-sm sm:text-base font-semibold leading-[1.4] tracking-tight">
+                Not sure how to sign up or use the app? Our team will guide you
+                through registration, document verification, and your first
+                delivery, step by step.
+              </p>
 
+              {/* Help Me Onboard Button */}
+              <button
+                type="button"
+                className="w-full flex items-center justify-between bg-[#DAE7F6] hover:bg-[#CFDFEF] rounded-[13px] p-1.5 pl-3.5 pr-1.5 text-[#1E293B] transition-all duration-200 cursor-pointer group"
+              >
+                <span className="text-sm sm:text-base font-medium tracking-tight">
+                  Help Me Onboard
+                </span>
+                <div className="w-8 h-8 bg-[#111827] group-hover:bg-black rounded-[9px] flex items-center justify-center transition-colors">
+                  <svg
+                    className="w-5 h-5 text-white stroke-[1.5]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M17 7H9M17 7V15"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            {/* Bottom Twin Indicator Bars */}
+            <div className="flex items-center gap-1.5 px-0.5">
+              <div className="h-[3px] w-1/2 bg-[#111827] rounded-full" />
+              <div className="h-[3px] w-1/2 bg-[#111827] rounded-full" />
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

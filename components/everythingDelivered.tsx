@@ -74,7 +74,7 @@ const EverythingDelivered = () => {
           <Reveal key={feature.id} delay={0.15 * (index + 1)} className="h-full">
             <div
               ref={feature.isDark ? darkCardRef : undefined}
-              className={`group relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-[28px] sm:rounded-[32px] overflow-hidden border border-[#0000003d]/10 flex flex-col transition-all duration-300  ${
+              className={`group relative w-full aspect-[4/5] sm:aspect-[9/16] lg:aspect-[3/4] rounded-[28px] sm:rounded-[32px] overflow-hidden border border-[#0000003d]/10 flex flex-col transition-all duration-300  ${
                 feature.isDark ? "bg-[#141414] justify-between" : "bg-[#F8FAFC] justify-end"
               }`}
             >
@@ -83,7 +83,7 @@ const EverythingDelivered = () => {
                 <>
                   {/* Top Text for Dark Card */}
                   <div className="relative z-10 pt-8 sm:pt-10 md:pt-[30%] px-6 text-center">
-                    <h3 className="text-white font-semibold text-xl sm:text-2xl md:text-[32px] tracking-tight leading-snug whitespace-pre-line">
+                    <h3 className="text-white font-semibold text-xl sm:text-2xl lg:text-[32px] tracking-tight leading-snug whitespace-pre-line">
                       {feature.topTitle}
                     </h3>
                   </div>
@@ -128,7 +128,7 @@ const EverythingDelivered = () => {
 
                   {/* Bottom Text for Light Cards */}
                   <div className="relative z-10 p-6 sm:p-7 md:px-8">
-                    <p className="text-[#111827] text-sm sm:text-2xl font-medium flex items-start leading-[1.2]">
+                    <p className="text-[#111827] text-sm md:text-base lg:text-2xl font-medium flex items-start leading-[1.2]">
                       {feature.description}
                     </p>
                   </div>

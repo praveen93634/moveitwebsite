@@ -38,7 +38,7 @@ export default function Hero() {
                     <div className="relative w-full max-w-[960px] mt-4 sm:mt-6 md:mt-8 flex justify-center items-center">
 
                     {/* Main 3D Diorama Image Container */}
-                    <div className="relative w-full aspect-[16/9] max-h-[540px] rounded-2xl flex items-center justify-center mt-10">
+                    <div className="relative w-full aspect-[16/9] lg:max-h-[540px] rounded-2xl flex items-center justify-center mt-10">
                         <Image
                             src="/Hero-image.png"
                             alt="MOVEIT fast delivery 3D diorama showing rider delivering package to customer house"

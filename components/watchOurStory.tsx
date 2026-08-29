@@ -45,7 +45,7 @@ const WatchOurStory = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-4">
                     {/* Bottom-Left Card: Built for everyday moments */}
                     <Reveal delay={0.15} className="h-full">
-                        <div className="group relative w-full aspect-[3/3] rounded-[28px] md:rounded-[32px] overflow-hidden shadow-xs flex flex-col justify-end p-6 sm:p-8 md:p-10">
+                        <div className="group relative w-full aspect-[3/3] rounded-[28px] md:rounded-[32px] overflow-hidden  flex flex-col justify-end p-6 sm:p-8 lg:p-10">
                             {/* Background Image */}
                             <Image
                                 src="/everyday_moments.png"
@@ -60,10 +60,10 @@ const WatchOurStory = () => {
 
                             {/* Card Text Content */}
                             <div className="relative z-10">
-                                <h2 className="text-white font-bold text-xl sm:text-2xl md:text-[26px] tracking-tight leading-snug">
+                                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-[26px] tracking-tight leading-snug">
                                     Built for everyday moments.
                                 </h2>
-                                <p className="text-[#F8FAFC] text-xs sm:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] max-w-md">
+                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] lg:max-w-md">
                                     Forgot your keys? Sending documents? Delivering groceries or a
                                     surprise gift? Moveit is there when everyday life needs an
                                     extra hand.
@@ -74,7 +74,7 @@ const WatchOurStory = () => {
 
                     {/* Bottom-Right Card: Always know where it is */}
                     <Reveal delay={0.25} className="h-full">
-                        <div className="group relative w-full aspect-[3/3] rounded-[28px] sm:rounded-[32px] md:rounded-[32px] overflow-hidden shadow-xs bg-gradient-to-br from-[#1A3D68] via-[#0E203B] to-[#080E18] flex flex-col justify-between p-6 sm:p-8 md:p-10">
+                        <div className="group relative w-full aspect-[3/3] rounded-[28px] sm:rounded-[32px] md:rounded-[32px] overflow-hidden shadow-xs bg-gradient-to-br from-[#1A3D68] via-[#0E203B] to-[#080E18] flex flex-col justify-between p-6 sm:p-8 lg:p-10">
                             <Image
                                 src="/gradient.png"
                                 alt="Delivery parcel handover - Built for everyday moments"
@@ -101,7 +101,7 @@ const WatchOurStory = () => {
                                         y: -10,
                                         transition: { duration: 0.3 },
                                     }}
-                                    className="relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] aspect-[16/10] rounded-2xl overflow-hidden drop-shadow-[0_20px_30px_rgba(0,0,0,0.45)] cursor-pointer group/map"
+                                    className="relative w-full max-w-[340px]  md:max-w-[420px] aspect-[16/10] rounded-2xl overflow-hidden drop-shadow-[0_20px_30px_rgba(0,0,0,0.45)] cursor-pointer group/map"
                                 >
                                     <Image
                                         src="/pickup.svg"
@@ -118,10 +118,10 @@ const WatchOurStory = () => {
 
                             {/* Card Text Content */}
                             <div className="relative z-10">
-                                <h2 className="text-white font-bold text-xl sm:text-2xl md:text-[26px] tracking-tight leading-snug">
+                                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-[26px] tracking-tight leading-snug">
                                     Always know where it is.
                                 </h2>
-                                <p className="text-[#F8FAFC] text-xs sm:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] max-w-md">
+                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] lg:max-w-md">
                                     Every delivery comes with live tracking, delivery updates,
                                     and accurate ETAs, so you always know where your package
                                     is—from pickup to doorstep.

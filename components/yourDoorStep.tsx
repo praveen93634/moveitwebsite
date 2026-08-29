@@ -117,12 +117,12 @@ export default function YourDoorStep() {
                 className="relative w-full bg-[#141414] overflow-hidden flex flex-col justify-between pt-16 sm:pt-20 md:pt-24 pb-0"
             >
 
-            <div className="w-full px-5 sm:px-8 md:px-12 lg:px-[6%] flex flex-col flex-1 justify-between">
+            <div className="w-full px-5 sm:px-8 md:px-8 lg:px-12 xl:px-[6%] flex flex-col flex-1 justify-between">
 
                 {/* Section Header with Scroll Color Reveal */}
                 <Reveal delay={0.1}>
-                    <div className="text-center z-10 mb-8 sm:mb-12 md:mb-14">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12]">
+                    <div className="text-center z-10 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
+                        <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-[54px] font-bold tracking-tight leading-[1.12]">
                             <motion.span
                                 style={{ color: fromColor }}
                                 className="transition-colors duration-200"
@@ -137,10 +137,10 @@ export default function YourDoorStep() {
                 </Reveal>
 
                 {/* 3-Column Interactive Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start gap-8 md:gap-8 lg:gap-14 z-10 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start gap-6 md:gap-4 lg:gap-10 xl:gap-14 z-10 w-full">
 
                     {/* Left Column: Dynamic Title aligned with top of the phone */}
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left pt-6 sm:pt-8 md:pt-20">
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left pt-2 sm:pt-4 md:pt-10 lg:pt-16">
                         <AnimatePresence mode="wait">
                             <motion.h3
                                 key={currentStep.id}
@@ -148,7 +148,7 @@ export default function YourDoorStep() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
-                                className="text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-[32px] lg:text-[32px] tracking-tight leading-snug whitespace-pre-line"
+                                className="text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-[32px] tracking-tight leading-snug whitespace-pre-line"
                             >
                                 {currentStep.leftTitle}
                             </motion.h3>
@@ -158,7 +158,7 @@ export default function YourDoorStep() {
                     {/* Center Column: Phone Mockup cut off cleanly at bottom border */}
                     <div className="flex justify-center items-end order-first md:order-none">
                         <motion.div
-                            className="relative w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] h-[360px] sm:h-[420px] md:h-[480px] lg:h-[540px] overflow-hidden flex items-start justify-center"
+                            className="relative w-[280px] sm:w-[320px] md:w-[260px] lg:w-[360px] xl:w-[440px] h-[340px] sm:h-[400px] md:h-[380px] lg:h-[480px] xl:h-[540px] overflow-hidden flex items-start justify-center"
                             style={{ y: phoneY, opacity: phoneOpacity }}
                         >
                             <AnimatePresence mode="wait">
@@ -168,7 +168,7 @@ export default function YourDoorStep() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0.85, scale: 0.99 }}
                                     transition={{ duration: 0.25, ease: "easeInOut" }}
-                                    className="relative w-full h-[700px] sm:h-[800px] md:h-[900px] lg:h-[1000px] flex items-start justify-center shrink-0"
+                                    className="relative w-full h-[680px] sm:h-[760px] md:h-[750px] lg:h-[900px] xl:h-[1000px] flex items-start justify-center shrink-0"
                                 >
                                     <Image
                                         src={currentStep.image}
@@ -176,7 +176,7 @@ export default function YourDoorStep() {
                                         fill
                                         priority
                                         className="object-contain object-top drop-shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
-                                        sizes="(max-width: 768px) 340px, (max-width: 1024px) 420px, 480px"
+                                        sizes="(max-width: 768px) 320px, (max-width: 1024px) 280px, 440px"
                                     />
                                 </motion.div>
                             </AnimatePresence>
@@ -184,9 +184,9 @@ export default function YourDoorStep() {
                     </div>
 
                     {/* Right Column: Clickable Tabs & Dynamic Description aligned with top of the phone */}
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-5 sm:gap-6 pt-6 sm:pt-8 md:pt-10">
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 sm:gap-5 md:gap-4 lg:gap-6 pt-2 sm:pt-4 md:pt-6 lg:pt-10">
                         {/* Interactive Step Tabs */}
-                        <div className="flex items-center gap-4 sm:gap-5 md:gap-6 flex-wrap justify-center md:justify-start">
+                        <div className="flex items-center gap-3 sm:gap-5 md:gap-3 lg:gap-5 xl:gap-6 flex-wrap justify-center md:justify-start">
                             {STEPS.map((step, index) => {
                                 const isActive = activeTab === index;
                                 return (
@@ -194,7 +194,7 @@ export default function YourDoorStep() {
                                         key={step.id}
                                         type="button"
                                         onClick={() => setActiveTab(index)}
-                                        className="relative cursor-pointer py-1 text-xs sm:text-base font-medium transition-all duration-200 focus:outline-none"
+                                        className="relative cursor-pointer py-1 text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base font-medium transition-all duration-200 focus:outline-none"
                                     >
                                         <span
                                             className={`transition-colors duration-200 ${isActive
@@ -210,7 +210,7 @@ export default function YourDoorStep() {
                         </div>
 
                         {/* Step Description */}
-                        <div className="min-h-[80px]">
+                        <div className="min-h-[70px] md:min-h-[80px]">
                             <AnimatePresence mode="wait">
                                 <motion.p
                                     key={currentStep.id}
@@ -218,7 +218,7 @@ export default function YourDoorStep() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.3, ease: "easeOut" }}
-                                    className="text-[#BFBFBF] text-sm sm:text-base md:text-2xl font-normal leading-[1.3] max-w-sm"
+                                    className="text-[#BFBFBF] text-sm sm:text-base md:text-xs lg:text-base xl:text-2xl font-normal leading-[1.35] max-w-sm"
                                 >
                                     {currentStep.description}
                                 </motion.p>

@@ -111,6 +111,29 @@ export default function YourDoorStep() {
                 </motion.div>
             </div>
 
+            {/* Animated Road below Scooter */}
+            <div className="relative w-full h-7 bg-[#1E2330]  border-t border-white/10 flex items-center overflow-hidden z-10">
+              {/* Animated Dashed Road Stripes moving right to left */}
+              <motion.div
+                className="flex gap-6 w-[200%] absolute left-0"
+                animate={{
+                  x: ["0%", "-50%"],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1,
+                  ease: "linear",
+                }}
+              >
+                {[...Array(50)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-8 sm:w-10 h-1 bg-[#FBBF24] shrink-0 shadow-[0_0_8px_rgba(251,191,36,0.5)]"
+                  />
+                ))}
+              </motion.div>
+            </div>
+
             {/* Main Black Doorstep Section */}
             <section
                 ref={sectionRef}

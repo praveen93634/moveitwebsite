@@ -24,9 +24,9 @@ export default function Footer() {
         {/* Left Column: Brand Statement & Socials */}
         <div className="flex flex-col justify-between h-full gap-12 sm:gap-16">
           <Reveal delay={0.1}>
-            <p className="text-[#BFBFBF] text-sm sm:text-base md:text-[17px] font-normal leading-relaxed max-w-sm">
+            <p className="text-[#F8FAFC] text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-sm">
               Local delivery, reimagined. Book a verified delivery partner,
-              track every step in real time, and send almost anything across
+              track every step in real time, and send almost anything across<br/>
               the city in minutes.
             </p>
           </Reveal>
@@ -84,13 +84,13 @@ export default function Footer() {
                 <Reveal key={link.label} delay={0.1 + index * 0.05}>
                   <a
                     href={link.href}
-                    className="group flex items-center justify-between py-3.5 sm:py-4.5 border-b border-[#262626] transition-colors duration-200 cursor-pointer"
+                    className="group flex items-center  justify-between py-3.5 sm:py-1.2 border-b-2 border-[#3C3D40] transition-colors duration-200 cursor-pointer"
                   >
-                    <span className="text-[#8E8E93] group-hover:text-white text-2xl sm:text-3xl md:text-[34px] font-normal tracking-tight transition-colors duration-200">
+                    <span className="text-[#8E8E93] group-hover:text-white text-2xl sm:text-3xl md:text-[32px] font-medium tracking-tight transition-colors duration-200">
                       {link.label}
                     </span>
-                    {link.hasIcon && (
-                      <span className="text-[#8E8E93] group-hover:text-white transition-colors duration-200">
+                    {(
+                      <span className="text-[#8E8E93] group-hover:text-white opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-1 group-hover:translate-x-0">
                         <svg
                           className="w-5 h-5 sm:w-6 sm:h-6"
                           fill="none"

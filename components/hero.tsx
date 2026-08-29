@@ -59,7 +59,7 @@ export default function Hero() {
                                 repeat: Infinity,
                                 ease: "easeInOut",
                             }}
-                            className="absolute top-[6%] right-[16%] sm:top-[8%] sm:right-[20%] md:top-[-10%] md:right-[45%] z-20 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-20 drop-shadow-[0_20px_30px_rgba(0,0,0,0.25)] pointer-events-none select-none"
+                            className="absolute top-[6%] right-[12%] sm:top-[-14%] lg:right-[45%] lg:top-[-10%] md:right-[42%] z-20 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-20 drop-shadow-[0_20px_30px_rgba(0,0,0,0.25)] pointer-events-none select-none"
                         >
                             <Image
                                 src="/location point.png"

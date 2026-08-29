@@ -146,13 +146,13 @@ export default function TextReveal({
   return (
     <section
       ref={sectionRef}
-      className={`w-full bg-white relative overflow-hidden flex flex-col ${
+      className={`w-full max-w-full bg-white relative overflow-hidden flex flex-col ${
         hasHeader ? "justify-between" : "justify-center"
-      } items-center py-16 md:py-24 min-h-screen ${className}`}
+      } items-center py-16 md:py-24 min-h-screen box-border ${className}`}
     >
       <div
         ref={containerRef}
-        className={`w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 relative z-10 flex flex-col ${
+        className={`w-full max-w-5xl mx-auto px-6 sm:px-8 md:px-12 relative z-10 flex flex-col box-border ${
           hasHeader ? "justify-between flex-1" : "justify-center items-center"
         }`}
       >
@@ -206,7 +206,7 @@ export default function TextReveal({
           {/* Byline / Footer Subtitle */}
           {byline && (
             <div
-              className={`mt-10 sm:mt-14 md:mt-16 text-sm sm:text-2xl font-medium tracking-tight select-none ${
+              className={`mt-10 sm:mt-14 md:mt-16 text-sm sm:text-2xl font-semibold tracking-tight select-none ${
                 align === "center"
                   ? "text-center"
                   : align === "right"

@@ -128,7 +128,7 @@ export default function YourDoorStep() {
                 {[...Array(50)].map((_, i) => (
                   <div
                     key={i}
-                    className="w-8 sm:w-10 h-1 bg-[#FBBF24] shrink-0 shadow-[0_0_8px_rgba(251,191,36,0.5)]"
+                    className="w-8 sm:w-10 h-1 bg-[#ffffff] shrink-0 shadow-[0_0_8px_rgba(251,191,36,0.5)]"
                   />
                 ))}
               </motion.div>

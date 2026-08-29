@@ -117,11 +117,11 @@ export default function YourDoorStep() {
               <motion.div
                 className="flex gap-6 w-[200%] absolute left-0"
                 animate={{
-                  x: ["0%", "-50%"],
+                  x: ["-50%", "0%"],
                 }}
                 transition={{
                   repeat: Infinity,
-                  duration: 1,
+                  duration: 5,
                   ease: "linear",
                 }}
               >

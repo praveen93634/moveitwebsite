@@ -218,7 +218,7 @@ export default function Loader({
             className="relative w-28 h-28 sm:w-36 sm:h-36 drop-shadow-[0_12px_20px_rgba(0,0,0,0.6)] z-20"
           >
             <Image
-              src="/scooter-right.png"
+              src="/scooter-right-new.png"
               alt="Moveit Delivery Scooter moving"
               fill
               priority

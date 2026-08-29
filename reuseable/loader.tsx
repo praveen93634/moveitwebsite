@@ -118,7 +118,7 @@ export default function Loader({
               className="object-contain"
             />
           </div>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#005AFB] bg-blue-500/10 px-3 py-0.5 rounded-full">
+          <span className="text-[11px] font-semibold uppercase tracking-tight text-[#005AFB] bg-blue-500/10 px-3 py-0.5 rounded-full">
              Deliver Anything. Anytime. Anywhere.
           </span>
         </motion.div>
@@ -126,7 +126,7 @@ export default function Loader({
 
       {/* Main Scooter & Road Scene Area */}
       <div
-        className="relative w-full h-44 sm:h-52 bg-gradient-to-b from-[#161922] via-[#0F1219] to-[#0A0C10] rounded-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col items-center justify-between p-4 cursor-pointer group"
+        className="relative w-full h-44 sm:h-52 bg-gradient-to-b from-[#161922] via-[#0F1219] to-[#0A0C10] rounded-xl overflow-hidden border border-white/10 shadow-2xl flex flex-col items-center justify-between p-4 cursor-pointer group"
         onMouseDown={() => setIsBoosting(true)}
         onMouseUp={() => setIsBoosting(false)}
         onTouchStart={() => setIsBoosting(true)}

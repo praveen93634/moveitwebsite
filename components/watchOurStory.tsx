@@ -60,10 +60,10 @@ const WatchOurStory = () => {
 
                             {/* Card Text Content */}
                             <div className="relative z-10">
-                                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-[26px] tracking-tight leading-snug">
+                                <h2 className="text-white font-bold text-xl md:text-2xl tracking-tight leading-snug">
                                     Built for everyday moments.
                                 </h2>
-                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] lg:max-w-md">
+                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.3] lg:max-w-sm">
                                     Forgot your keys? Sending documents? Delivering groceries or a
                                     surprise gift? Moveit is there when everyday life needs an
                                     extra hand.
@@ -118,12 +118,12 @@ const WatchOurStory = () => {
 
                             {/* Card Text Content */}
                             <div className="relative z-10">
-                                <h2 className="text-white font-bold text-xl md:text-2xl lg:text-[26px] tracking-tight leading-snug">
+                                <h2 className="text-white font-bold text-xl md:text-2xl  tracking-tight leading-snug">
                                     Always know where it is.
                                 </h2>
-                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.2] lg:max-w-md">
-                                    Every delivery comes with live tracking, delivery updates,
-                                    and accurate ETAs, so you always know where your package
+                                <p className="text-[#F8FAFC] text-xs md:text-sm lg:text-base font-normal mt-2 sm:mt-2.5 leading-[1.3] lg:max-w-md">
+                                    Every delivery comes with live tracking, delivery updates,<br/>
+                                    and accurate ETAs, so you always know where your <br/> package
                                     is—from pickup to doorstep.
                                 </p>
                             </div>

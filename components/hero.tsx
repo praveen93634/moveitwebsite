@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <section className="relative w-full p-3 sm:p-5 md:p-8">
             {/* Outer Card Container */}
-            <div className="relative w-full bg-[#F1F5F9] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden px-5 sm:px-10 md:px-14 pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-12 md:pb-16 flex flex-col items-center">
+            <div className="relative w-full bg-[#F1F5F9] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden px-5 sm:px-10 md:px-[3%] pt-4 sm:pt-6 md:pt-8 pb-8 sm:pb-12 md:pb-16 flex flex-col items-center">
                 <Navbar />
 
                 <Reveal delay={0.05} className="w-full flex flex-col items-center">

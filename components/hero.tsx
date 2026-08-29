@@ -16,7 +16,7 @@ export default function Hero() {
                 <Reveal delay={0.05} className="w-full flex flex-col items-center">
                     <div className="flex flex-col items-center text-center mt-6 sm:mt-8 md:mt-10 z-10">
                         <div className="inline-flex items-center justify-center px-4 py-1.5 mb-3 sm:mb-4 rounded-md bg-[#F2F5F9] border border-slate-200/80 shadow-xs backdrop-blur-sm">
-                            <span className="text-xs md:text-sm font-semibold text-[#7A7A7A] tracking-tight">
+                            <span className="text-xs md:text-sm font-semibold text-[#7A7A7A] tracking-tighter">
                                 Deliver Anything. Anytime. Anywhere.
                             </span>
                         </div>
@@ -26,7 +26,7 @@ export default function Hero() {
                             <span className="text-[#0052FF] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none">
                                 Move anything.
                             </span>
-                            <span className="text-[#111827] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none">
+                            <span className="text-[#111827] font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter leading-none">
                                 Delivered in minutes.
                             </span>
                         </h1>

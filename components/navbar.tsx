@@ -37,13 +37,15 @@ export default function Navbar({ className = "", onGetAppClick }: NavbarProps) {
         {/* Store Icons Pill */}
         <div className="flex items-center gap-1">
           {/* Play Store Icon */}
-          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-[10px] bg-white flex items-center justify-center text-[#111827] group-hover:scale-105 transition-transform">
-            <svg
-              className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5.5 3.87v16.26c0 .77.84 1.26 1.51.87l13.5-8.13c.66-.39.66-1.35 0-1.74l-13.5-8.13c-.67-.39-1.51.1-1.51.87z" />
-            </svg>
+          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-[10px] bg-white flex items-center justify-center text-[#111827] group-hover:scale-105 transition-transform p-1">
+            <div className="relative w-3 h-3 sm:w-3.5 sm:h-3.5">
+              <Image
+                src="/Playstore-og.png"
+                alt="Play Store"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Apple Store Icon */}

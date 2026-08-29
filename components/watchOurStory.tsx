@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Reveal from "@/reuseable/Reveal";
 
 const WatchOurStory = () => {
@@ -84,16 +85,35 @@ const WatchOurStory = () => {
 
                             {/* Center Floating Live Tracking Widget */}
                             <div className="relative z-10 my-auto flex justify-center items-center py-2 sm:py-4 w-full">
-                                {/* Illustrated Map Preview */}
-                                <div className="relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] aspect-[16/10] rounded-xl overflow-hidden">
+                                {/* Illustrated Map Preview with Floating Levitation & Radar Pulse */}
+                                <motion.div
+                                    animate={{
+                                        y: [0, -8, 0, -4, 0],
+                                        rotate: [0, 0.8, -0.6, 0],
+                                    }}
+                                    transition={{
+                                        duration: 5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                    }}
+                                    whileHover={{
+                                        scale: 1.05,
+                                        y: -10,
+                                        transition: { duration: 0.3 },
+                                    }}
+                                    className="relative w-full max-w-[340px] sm:max-w-[380px] md:max-w-[420px] aspect-[16/10] rounded-2xl overflow-hidden drop-shadow-[0_20px_30px_rgba(0,0,0,0.45)] cursor-pointer group/map"
+                                >
                                     <Image
                                         src="/pickup.svg"
                                         alt="Live driver pickup tracking map"
                                         fill
-                                        className="object-contain"
+                                        className="object-contain transition-transform duration-500 group-hover/map:scale-102"
                                         sizes="(max-width: 768px) 340px, 420px"
                                     />
-                                </div>
+
+                                    {/* Ambient radar ping ripple effect */}
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full bg-[#005AFB]/15 animate-ping pointer-events-none" />
+                                </motion.div>
                             </div>
 
                             {/* Card Text Content */}
